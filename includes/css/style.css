@@ -1,0 +1,29 @@
+html {
+    height: 100%;
+}
+body {
+    height: 90%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+.inner {
+	display: table-cell;
+	vertical-align: middle;
+	overflow: auto;
+}
+#main-content {
+	font-family: 'Lora', sans-serif;
+	font-size: 35px;
+	margin: auto;
+	text-align: center;
+	overflow: auto;
+    padding: 0px 100px;
+}

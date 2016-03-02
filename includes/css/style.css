@@ -1,12 +1,20 @@
 html {
     height: 100%;
 }
+ul {
+    padding: 0;
+}
+div {
+    word-wrap: break-word;
+}
 body {
+    background-color: #DFE2DB;
     height: 90%;
     overflow: hidden;
     padding: 0;
     margin: 0;
 }
+
 .outer {
 	display: table;
 	position: absolute;
@@ -18,12 +26,68 @@ body {
 	display: table-cell;
 	vertical-align: middle;
 	overflow: auto;
+    text-align: center;
+}
+
+.subreddit-name-container {
+    position: relative;
+}
+.subreddit-name-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 28px;
+    font-family: Montserrat;
+    font-style: italic;
 }
 #main-content {
 	font-family: 'Lora', sans-serif;
 	font-size: 35px;
 	margin: auto;
 	text-align: center;
-	overflow: auto;
+	overflow: hidden;
     padding: 0px 100px;
+}
+/*
+ * Controls
+ */
+.fack {
+    margin: 0;
+    padding: 0;
+}
+.prev {
+    font-size: 30px;
+    overflow: hidden;
+    left: 1%;
+    position: absolute;
+    top: 44%;
+}
+.slider {
+    font-size: 40px;
+    text-decoration: none;
+}
+.next {
+    right: 1%;
+    font-size: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 44%;
+}
+
+/*
+ * Media Queries
+ */
+@media (max-width: 1200px) {
+    #main-content {
+        font-size: 32px;
+        padding: 0 50px;
+        margin: 0;
+    }
+}
+@media (max-width: 480px) {
+    #main-content {
+        font-size: 18px;
+        padding: 0 45px;
+        margin: 0;
+    }
 }

@@ -7,4 +7,4 @@
 3. Any Subreddit
 4. Last 5 posts
 5. Caching
-6. Carousel
+6. Carousel     -- make myself. Make functions, list insert and delete. Use Animate.css for effects

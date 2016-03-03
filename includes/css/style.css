@@ -65,6 +65,7 @@ body {
 .slider {
     font-size: 40px;
     text-decoration: none;
+    color: #000;
 }
 .next {
     right: 1%;
@@ -72,6 +73,61 @@ body {
     overflow: hidden;
     position: absolute;
     top: 44%;
+}
+
+/*
+ *  Social Icons
+ */
+
+.social-icon {
+    position: absolute;
+    background-color: #f0f0f0;
+    padding: 0.4em;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.icon-facebook {
+    right: 2%;
+    top: 3%;
+    color: #3b5998;
+}
+.icon-facebook:hover {
+    background: #3b5998;
+    color: #fff;
+}
+.icon-twitter {
+    right: 2%;
+    top: 8%;
+    color: #0084b4;
+}
+.icon-twitter:hover {
+    background: #0084b4;
+    color: #fff;
+}
+.icon-reddit {
+    right: 2%;
+    top: 13%;
+    color: #FF7500;
+}
+.icon-reddit:hover {
+    background: #FF7500;
+    color: #fff;
+}
+.icon-wrench {
+    right: 2%;
+    bottom: 2%;
+    background: #fff;
+    color: #FF0F00;
+}
+.icon-wrench:hover {
+    background: #FF0F00;
+    color: #fff;
+}
+.icon-loop2 {
+    left: 2%;
+    bottom: 2%;
 }
 
 /*

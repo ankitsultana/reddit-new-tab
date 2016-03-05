@@ -9,6 +9,8 @@ div {
 }
 body {
     background-color: #DFE2DB;
+    background-color: #282C34;
+    color: #6DB372;
     height: 90%;
     overflow: hidden;
     padding: 0;
@@ -40,6 +42,9 @@ body {
     font-family: Montserrat;
     font-style: italic;
 }
+.subreddit-name-container p a {
+    color: #6DB372;
+}
 #main-content {
 	font-family: 'Lora', sans-serif;
 	font-size: 35px;
@@ -66,7 +71,7 @@ body {
     font-size: 38px;
     font-family: 'Lora';
     text-decoration: none;
-    color: #000;
+    color: #6DB372;
 }
 .next {
     right: 1%;
@@ -83,52 +88,52 @@ body {
     text-align: center;
     vertical-align: middle;
     position: absolute;
-    background-color: #fff;
+    color: #fff;
     padding: 0.5em;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     transition: all 0.2s;
-    width: 20px;
+    width: 18px;
     line-height: 100%;
     font-size: 16px;
     border-radius: 50%;
 }
 .icon-facebook {
     right: 2%;
-    top: 3%;
-    color: #3b5998;
+    top: 2%;
+    background-color: #3b5998;
 }
 .icon-facebook:hover {
-    background: #3b5998;
-    color: #fff;
+    color: #3b5998;
+    background: #fff;
 }
 .icon-twitter {
     right: 2%;
-    top: 8%;
-    color: #0084b4;
+    top: 7%;
+    background-color: #0084b4;
 }
 .icon-twitter:hover {
-    background: #0084b4;
-    color: #fff;
+    color: #0084b4;
+    background: #fff;
 }
 .icon-reddit {
     right: 2%;
-    top: 13%;
-    color: #FF7500;
+    top: 12%;
+    background-color: #FF7500;
 }
 .icon-reddit:hover {
-    background: #FF7500;
-    color: #fff;
+    color: #FF7500;
+    background: #fff;
 }
 .icon-wrench {
     right: 2%;
     bottom: 2%;
-    background: #fff;
-    color: #FF0F00;
+    color: #fff;
+    background-color: #FF0F00;
 }
 .icon-wrench:hover {
-    background: #FF0F00;
-    color: #fff;
+    color: #FF0F00;
+    background: #fff;
 }
 .icon-loop2 {
     left: 2%;

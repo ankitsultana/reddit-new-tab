@@ -2,16 +2,26 @@
  * app engine
  */
 var redditapp = {
-    fetch: function() {
-        var arr
-        arr = [1, 100, 230]
-        return this.permute(arr)
+    DOWN_LIMIT: 3,
+    fetch: function() { // return arr of JSON data
+        var jsonData, key = this.getkey(), url, subreddit, xhr, result
+        url = key["url"] + '/top/.json?limit=' + this.DOWN_LIMIT
+        subreddit = key["subreddit"]
+        xhr = new XMLHttpRequest()
+        xhr.open('GET', url, false)
+        xhr.send()
+        jsonData = JSON.parse(xhr.response)
+        result = jsonData["data"]["children"]
+        return result
     },
-    geturl: function() {
-        var i
-        for (i = 0; i < localStorage.length; i++) {
-            console.log(localStorage.getItem(localStorage.key(i)))
-        }
+    getkey: function() {
+        var i, idx, url, subreddit, temp
+        idx = this.randomInt(0, localStorage.length - 1)
+        url = localStorage.getItem(localStorage.key(idx))
+        subreddit = localStorage.key(idx)
+        console.log(subreddit), console.log(url)
+        temp = '{"subreddit": "' + subreddit + '", "url": "' + url + '"}'
+        return JSON.parse(temp)
     },
     addCategory: function(input) {
         var resp = this.checkCategory(input)
@@ -19,7 +29,15 @@ var redditapp = {
             // error
             this.failure()
         } else {
+            localStorage.setItem(resp['subreddit'], resp['url'])
             console.log(resp)
+        }
+        this.printAllCategory()
+    },
+    printAllCategory: function() {
+        var iter
+        for (iter = 0; iter < localStorage.length; iter++) {
+            console.log(localStorage.getItem(localStorage.key(iter)))
         }
     },
     deleteCategory: function(input) {
@@ -49,10 +67,10 @@ var redditapp = {
     failure: function() {
         console.log('Failed to add, please try again')
     },
-    permute: function(input) {
-
-    },
     clear: function() {
         localStorage.clear()
+    },
+    randomInt: function(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
     }
 }

@@ -2,6 +2,14 @@ var carousel = {
     data: [],
     currIdx: 0,
     len: 0,
+    setSocial: function(title, subreddit, url) {
+        var fburl, twitterurl, redditurl
+        fburl = encodeURI('https://facebook.com/sharer/sharer.php?u=' + url)
+        twitterurl = encodeURI('https://twitter.com/intent/tweet?text=' + title + '&url=' + url)
+        $('#facebook-link').attr('href', fburl)
+        $('#twitter-link').attr('href', twitterurl)
+        $('#reddit-link').attr('href', url)
+    },
     setData: function(data) {
         document.getElementById('content').innerHTML = data
     },
@@ -19,33 +27,40 @@ var carousel = {
         }
         return temp
     },
+    display: function(idx) {
+        var title = this.getTitle(this.data[idx]), subreddit = this.getSubreddit(this.data[idx]), url = this.getURL(this.data[idx])
+        this.setData(title)
+        this.setSubreddit(subreddit)
+        this.setSocial(title, subreddit, url)
+    },
     go: function() {
         this.data = redditapp.fetch()
         this.data = this.rotate(this.data)
-        this.setData(this.getTitle(this.data[0]))
-        this.setSubreddit(this.getSubreddit(this.data[0]))
         this.currIdx = 0
         this.len = this.data.length
+        this.display(0)
     },
     getNext: function() {
         this.currIdx++
-        var currIdx = this.currIdx
-        this.setData(this.getTitle(this.data[currIdx]))
-        this.setSubreddit(this.getSubreddit(this.data[currIdx]))
-        return currIdx == this.data.length - 1
+        this.display(this.currIdx)
+        return this.currIdx == this.data.length - 1
     },
     getPrevious: function() {
         this.currIdx--
-        var currIdx = this.currIdx
-        this.setData(this.getTitle(this.data[currIdx]))
-        this.setSubreddit(this.getSubreddit(this.data[currIdx]))
-        return currIdx == 0
+        this.display(this.currIdx)
+        return this.currIdx == 0
     },
     getTitle: function(obj) {
         return obj["data"]["title"]
     },
     getSubreddit: function(obj) {
         return obj["data"]["subreddit"]
+    },
+    getURL: function(obj) {
+        return 'http://reddit.com/' + obj["data"]["permalink"]
+    },
+    refresh: function() {
+        this.go()
     }
 }
 
@@ -69,5 +84,8 @@ $(document).ready(function() {
         if (carousel.currIdx == carousel.len - 2) {
             $("#next-post").show()
         }
+    })
+    $('#refresh-button').on('click', function() {
+        carousel.refresh()
     })
 })

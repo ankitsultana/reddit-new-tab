@@ -53,6 +53,9 @@ body {
 	overflow: hidden;
     padding: 0px 100px;
 }
+.container {
+    max-width: 900px;
+}
 /*
  * Controls
  */

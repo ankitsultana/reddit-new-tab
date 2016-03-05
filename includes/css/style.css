@@ -3,6 +3,10 @@ html {
 }
 ul {
     padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
 }
 div {
     word-wrap: break-word;
@@ -55,6 +59,46 @@ body {
 }
 .container {
     max-width: 900px;
+    margin: auto;
+    padding-top: 50px;
+    font-size: 38px;
+}
+#input-container {
+    margin-bottom: 100px;
+}
+#category-input {
+    background-color: #48596B;
+    color: inherit;
+    float: right;
+    margin-left: 0;
+    width: 60%;
+    height: 40px;
+    font-size: 38px;
+    border: none;
+}
+#error-container {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0px;
+    background: #f0f0f0;
+    padding: 1px;
+    border-radius: 9px;
+}
+.icon-cross {
+    font-size: 20px;
+    color: #fff;
+    float: left;
+    /*float: right;*/
+}
+input:focus {
+    outline: none;
+}
+#category-list li {
+    float: left;
+    margin: 3px 3px;
+    padding: 3px;
+    background-color: #fff000;
+    border-radius: 10px;
 }
 /*
  * Controls

@@ -8,12 +8,21 @@
         <link href="includes/css/style.css" rel="stylesheet">
         <link href="includes/css/font.css" rel="stylesheet">
         <link href="includes/css/animate.css" rel="stylesheet">
+        <link href="includes/css/icomoon.css" rel="stylesheet">
     </head>
     <body>
-        <input type="form"></input>
         <div class="container">
-            <span class="button"></span>
+            <div id="error-container">
+                <p> Error! Please try again <a href="#"><span class="dismiss-error icon-cross"></span></a></p>
+            </div>
+            <div id="input-container">
+                <form id="target"><input id="category-input" type="text" value"shit">http://reddit.com/</input></form>
+            </div>
+            <ul id="category-list">
+            </ul>
         </div>
         <script src="includes/js/vendor/jquery.min.js"></script>
+        <script src="includes/js/lib/app.js"></script>
+        <script src="includes/js/lib/options.js"></script>
     </body>
 </html>

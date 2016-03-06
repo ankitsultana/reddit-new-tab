@@ -15,6 +15,7 @@ body {
     background-color: #DFE2DB;
     background-color: #282C34;
     color: #6DB372;
+    color: #FF7500;
     height: 90%;
     overflow: hidden;
     padding: 0;
@@ -47,7 +48,7 @@ body {
     font-style: italic;
 }
 .subreddit-name-container p a {
-    color: #6DB372;
+    color: #FF7500;
 }
 #main-content {
 	font-family: 'Lora', sans-serif;

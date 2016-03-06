@@ -6,6 +6,11 @@
     "chrome_url_overrides": {
         "newtab": "index.html"
     },
+    "icons": {
+        "16": "/images/icons/reddit16.png",
+        "48": "/images/icons/reddit48.png",
+        "128": "/images/icons/reddit128.png"
+    },
     "permissions": [
       "https://www.reddit.com/*",
       "storage"

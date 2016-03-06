@@ -13,8 +13,9 @@ var carousel = {
     setData: function(data) {
         document.getElementById('content').innerHTML = data
     },
-    setSubreddit: function(subreddit) {
+    setSubreddit: function(subreddit, url) {
         document.getElementById('subreddit-name').innerHTML = subreddit
+        $('#subreddit-name').attr('href', url)
     },
     rotate: function(arr) {
         var len = arr.length, temp = [], iter, hinge
@@ -29,8 +30,9 @@ var carousel = {
     },
     display: function(idx) {
         var title = this.getTitle(this.data[idx]), subreddit = this.getSubreddit(this.data[idx]), url = this.getURL(this.data[idx])
+        console.log(this.data[idx])
         this.setData(title)
-        this.setSubreddit(subreddit)
+        this.setSubreddit(subreddit, redditapp.subredditurl)
         this.setSocial(title, subreddit, url)
     },
     go: function() {
@@ -92,6 +94,7 @@ $(document).ready(function() {
         }
     })
     $('#refresh-button').on('click', function() {
+        console.log('bam')
         carousel.refresh()
     })
 })

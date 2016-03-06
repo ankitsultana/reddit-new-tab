@@ -18,6 +18,8 @@ var redditapp = {
         var i, idx, url, subreddit, temp
         idx = this.randomInt(0, localStorage.length - 1)
         url = localStorage.getItem(localStorage.key(idx))
+        this.subredditurl = url
+        this.subreddit = localStorage.key(idx)
         subreddit = localStorage.key(idx)
         console.log(subreddit), console.log(url)
         temp = '{"subreddit": "' + subreddit + '", "url": "' + url + '"}'
@@ -25,5 +27,7 @@ var redditapp = {
     },
     randomInt: function(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
-    }
+    },
+    subredditurl: '',
+    subreddit: ''
 }

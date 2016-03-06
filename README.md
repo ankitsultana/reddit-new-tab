@@ -1,10 +1,15 @@
 # reddit-new-tab
 
-### Features
+A chrome extension that displays a post from any subreddit in every new tab instance. Users can choose which subreddit they want to subscribe to
 
-1. Color Shuffle
-2. Local Fonts                                          --- Done
-3. Any Subreddit
-4. Last 5 posts
-5. Caching
-6. Carousel     -- make myself. Make functions, list insert and delete. Use Animate.css for effects
+### Screenshots
+
+**New Tab**
+
+![index.html](https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/images/screenshots/one.png)
+
+**Options Page**
+
+![options.html](https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/images/screenshots/two.png)
+
+![options.html](https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/images/screenshots/three.png)

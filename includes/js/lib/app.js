@@ -2,7 +2,7 @@
  * app engine
  */
 var redditapp = {
-    DOWN_LIMIT: 3,
+    DOWN_LIMIT: 50,
     fetch: function() { // return arr of JSON data
         var jsonData, key = this.getkey(), url, subreddit, xhr, result
         url = key["url"] + '/top/.json?limit=' + this.DOWN_LIMIT

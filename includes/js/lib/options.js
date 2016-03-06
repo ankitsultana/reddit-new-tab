@@ -14,8 +14,7 @@ var options = {
         var len = localStorage.length, iter, subreddit
         for (iter = 0; iter < len; iter++) {
             subreddit = localStorage.key(iter)
-            $('#category-list').append('<li><a class="delete-category" id="lement' + iter + '" href="#"><span class="icon-cross"></span></a>\
-                                        <p id="element' + iter + '">' + subreddit + '</p></li>')
+            $('#category-list').append('<li><p>' + '<a class="delete-category" id="lement' + iter + '" href="#"><span class="icon-cross"></span></a><span id="element' + iter + '">' + subreddit + '</span></p></li>')
         }
     },
     addCategory: function(input) {
@@ -75,5 +74,6 @@ $(document).on('click', '.delete-category', function() {
     var id = $(this).attr('id'), key
     id = 'e' + id
     key = document.getElementById(id).innerHTML
+    console.log(id)
     options.deleteCategory(key)
 })

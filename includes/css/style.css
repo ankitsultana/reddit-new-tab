@@ -76,6 +76,7 @@ body {
     height: 40px;
     font-size: 38px;
     border: none;
+    padding: 10px;
 }
 #error-container {
     text-align: center;
@@ -97,9 +98,19 @@ input:focus {
 #category-list li {
     float: left;
     margin: 3px 3px;
-    padding: 3px;
-    background-color: #fff000;
+    padding: 3px 5px;
+    background-color: #3d4654;
     border-radius: 10px;
+    font-size: 19px;
+}
+#category-list li .icon-cross {
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px;
+}
+#category-list p {
+    padding: 0;
+    margin: 0;
 }
 /*
  * Controls

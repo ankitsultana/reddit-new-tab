@@ -28,7 +28,7 @@ var options = {
         }
     },
     checkCategory: function(input) {
-        var xhr = new XMLHttpRequest(), url = 'https://www.reddit.com/' + input, status, jsonData
+        var xhr = new XMLHttpRequest(), url = 'https://www.reddit.com/' + input, status, jsonData, result
         if (url.slice(-1) == '/') {
             url = url.slice(0, -1)
         }
@@ -41,11 +41,15 @@ var options = {
         } else {
             console.log(xhr.responseText)
             jsonData = JSON.parse(xhr.responseText)
-            console.log(jsonData["data"]["children"][0]["data"]["subreddit"])
-            return {
+            try {
+                result = {
                 "subreddit": jsonData["data"]["children"][0]["data"]["subreddit"],
                 "url": url
+                }
+            } catch (e) {
+                return 1
             }
+            return result
         }
     },
     deleteCategory: function(subreddit) {

@@ -1,5 +1,8 @@
 html {
     height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 ul {
     padding: 0;
@@ -7,6 +10,7 @@ ul {
 }
 a {
     text-decoration: none;
+    color: inherit;
 }
 div {
     word-wrap: break-word;
@@ -16,10 +20,27 @@ body {
     background-color: #282C34;
     color: #6DB372;
     color: #FF7500;
-    height: 90%;
     overflow: hidden;
+    height: 100%;
     padding: 0;
     margin: 0;
+}
+#options-body {
+    background-color: #fff;
+    color: #011235;
+    font-family: 'Montserrat';
+    padding: 0;
+    margin: 0;
+}
+#options-body h1 {
+    font-size: 40px;
+}
+.intro {
+    text-align: center;
+    width: 100%;
+    background: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .outer {
@@ -67,30 +88,62 @@ body {
 #input-container {
     margin-bottom: 100px;
 }
+#baseurl {
+    padding: 10px;
+    padding-right: 0px;
+    display: inline-block;
+    float: left;
+}
+#inputurl {
+    float: left;
+}
+.container {
+    overflow-x: scroll;
+}
 #category-input {
-    background-color: #48596B;
+    font-family: 'Montserrat';
     color: inherit;
-    float: right;
     margin-left: 0;
-    width: 60%;
+    width: 450px;
     height: 40px;
     font-size: 38px;
-    border: none;
-    padding: 10px;
+    border-width: 0;
+    padding: 13px;
+    padding-left: 0px;
+}
+#category-input:focus {
+    background-color: #fff;
+    padding: 13px;
+    padding-left: 0px;
 }
 #error-container {
     text-align: center;
     font-size: 20px;
     margin-top: 0px;
     background: #f0f0f0;
-    padding: 1px;
+    padding: 5px;
     border-radius: 9px;
+    margin-bottom: 5px;
+}
+#error-container .icon-cross {
+    margin-left: 10px;
+    color: #000;
 }
 .icon-cross {
     font-size: 20px;
     color: #fff;
     float: left;
     /*float: right;*/
+}
+.icon-git {
+    font-size: 30px;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}
+.icon-git:hover {
+    -webkit-transition: 0.3s ease;
+    color: #F34F29;
 }
 input:focus {
     outline: none;
@@ -99,7 +152,7 @@ input:focus {
     float: left;
     margin: 3px 3px;
     padding: 3px 5px;
-    background-color: #3d4654;
+    background-color: #5990E9;
     border-radius: 10px;
     font-size: 19px;
 }
@@ -188,10 +241,10 @@ input:focus {
     right: 2%;
     bottom: 2%;
     color: #fff;
-    background-color: #FF0F00;
+    background-color: #6DB372;
 }
 .icon-wrench:hover {
-    color: #FF0F00;
+    color: #6DB372;
     background: #fff;
 }
 .icon-loop2 {

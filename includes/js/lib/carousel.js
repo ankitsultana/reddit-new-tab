@@ -34,6 +34,9 @@ var carousel = {
         this.setSocial(title, subreddit, url)
     },
     go: function() {
+        if (localStorage.length == 0) {
+            return
+        }
         this.data = redditapp.fetch()
         this.data = this.rotate(this.data)
         this.currIdx = 0
@@ -68,6 +71,9 @@ $(document).ready(function() {
     console.log("Enter the Carousel")
     $("#prev-post").hide()
     carousel.go()
+    if (carousel.len < 2) {
+        $("#next-post").hide()
+    }
 
     $("#next-post").on("click", function() {
         if (carousel.getNext()) {  // Hide next button

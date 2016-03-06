@@ -10,17 +10,23 @@
         <link href="includes/css/animate.css" rel="stylesheet">
         <link href="includes/css/icomoon.css" rel="stylesheet">
     </head>
-    <body>
+    <body id="options-body">
+        <div class="intro">
+            <h1> Settings </h1>
+        </div>
         <div class="container">
             <div id="error-container">
                 <p> Error! Please try again <a href="#"><span class="dismiss-error icon-cross"></span></a></p>
             </div>
             <div id="input-container">
-                <form id="target"><input id="category-input" type="text" value"shit">http://reddit.com/</input></form>
+                <div id="baseurl">https://reddit.com/</div>
+                <div id="inputurl"><form id="target"><input placeholder="enter url here" id="category-input" type="text"></input></form></div>
             </div>
+            <div style="clear:both"></div>
             <ul id="category-list">
             </ul>
         </div>
+        <a href="https://github.com/bk2dcradle/reddit-new-tab"><span class="icon-git"></span></a>
         <script src="includes/js/vendor/jquery.min.js"></script>
         <script src="includes/js/lib/app.js"></script>
         <script src="includes/js/lib/options.js"></script>

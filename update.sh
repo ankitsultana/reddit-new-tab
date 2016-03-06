@@ -1,6 +1,7 @@
 rm -rf dist
 mkdir dist
-cp -r images dist/
+mkdir dist/images
+cp -r images/icons dist/images/
 cp -r includes dist/
 cp options.html dist/
 cp index.html dist/

@@ -1,0 +1,271 @@
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+div {
+    word-wrap: break-word;
+}
+body {
+    background-color: #DFE2DB;
+    background-color: #282C34;
+    color: #6DB372;
+    color: #FF7500;
+    overflow: hidden;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#options-body {
+    background-color: #fff;
+    color: #011235;
+    font-family: 'Montserrat';
+    padding: 0;
+    margin: 0;
+}
+#options-body h1 {
+    font-size: 40px;
+}
+.intro {
+    text-align: center;
+    width: 100%;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.outer {
+	display: table;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}
+.inner {
+	display: table-cell;
+	vertical-align: middle;
+	overflow: auto;
+    text-align: center;
+}
+
+.subreddit-name-container {
+    position: relative;
+}
+.subreddit-name-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 28px;
+    font-family: Montserrat;
+    font-style: italic;
+}
+.subreddit-name-container p a {
+    color: #FF7500;
+}
+#main-content {
+	font-family: 'Lora', sans-serif;
+	font-size: 35px;
+	margin: auto;
+	text-align: center;
+	overflow: hidden;
+    padding: 0px 100px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding-top: 50px;
+    font-size: 38px;
+}
+#input-container {
+    margin-bottom: 100px;
+}
+#baseurl {
+    padding: 10px;
+    padding-right: 0px;
+    display: inline-block;
+    float: left;
+}
+#inputurl {
+    float: left;
+}
+.container {
+    overflow-x: scroll;
+}
+#category-input {
+    font-family: 'Montserrat';
+    color: inherit;
+    margin-left: 0;
+    width: 450px;
+    height: 40px;
+    font-size: 38px;
+    border-width: 0;
+    padding: 13px;
+    padding-left: 0px;
+}
+#category-input:focus {
+    background-color: #fff;
+    padding: 13px;
+    padding-left: 0px;
+}
+#error-container {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0px;
+    background: #f0f0f0;
+    padding: 5px;
+    border-radius: 9px;
+    margin-bottom: 5px;
+}
+#error-container .icon-cross {
+    margin-left: 10px;
+    color: #000;
+}
+.icon-cross {
+    font-size: 20px;
+    color: #fff;
+    float: left;
+    /*float: right;*/
+}
+.icon-git {
+    font-size: 30px;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}
+.icon-git:hover {
+    -webkit-transition: 0.3s ease;
+    color: #F34F29;
+}
+input:focus {
+    outline: none;
+}
+#category-list li {
+    float: left;
+    margin: 3px 3px;
+    padding: 3px 5px;
+    background-color: #5990E9;
+    border-radius: 10px;
+    font-size: 19px;
+}
+#category-list li .icon-cross {
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px;
+}
+#category-list p {
+    padding: 0;
+    margin: 0;
+}
+/*
+ * Controls
+ */
+.fack {
+    margin: 0;
+    padding: 0;
+}
+.prev {
+    font-size: 30px;
+    overflow: hidden;
+    left: 1%;
+    position: absolute;
+    top: 44%;
+}
+.slider {
+    font-size: 38px;
+    font-family: 'Lora';
+    text-decoration: none;
+    color: #6DB372;
+}
+.next {
+    right: 1%;
+    font-size: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 44%;
+}
+
+/*
+ *  Social Icons
+ */
+.social-icon {
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    color: #fff;
+    padding: 0.5em;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+    width: 18px;
+    line-height: 100%;
+    font-size: 16px;
+    border-radius: 50%;
+}
+.icon-facebook {
+    right: 2%;
+    top: 2%;
+    background-color: #3b5998;
+}
+.icon-facebook:hover {
+    color: #3b5998;
+    background: #fff;
+}
+.icon-twitter {
+    right: 2%;
+    top: 7%;
+    background-color: #0084b4;
+}
+.icon-twitter:hover {
+    color: #0084b4;
+    background: #fff;
+}
+.icon-reddit {
+    right: 2%;
+    top: 12%;
+    background-color: #FF7500;
+}
+.icon-reddit:hover {
+    color: #FF7500;
+    background: #fff;
+}
+.icon-wrench {
+    right: 2%;
+    bottom: 2%;
+    color: #fff;
+    background-color: #6DB372;
+}
+.icon-wrench:hover {
+    color: #6DB372;
+    background: #fff;
+}
+.icon-loop2 {
+    left: 2%;
+    bottom: 2%;
+}
+
+/*
+ * Media Queries
+ */
+@media (max-width: 1200px) {
+    #main-content {
+        font-size: 32px;
+        padding: 0 50px;
+        margin: 0;
+    }
+}
+@media (max-width: 480px) {
+    #main-content {
+        font-size: 18px;
+        padding: 0 45px;
+        margin: 0;
+    }
+}

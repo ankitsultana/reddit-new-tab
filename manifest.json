@@ -1,7 +1,7 @@
 {
     "name": "Reddit New Tab",
     "description": "Replaces New Tab instances with a post from Sub-Reddits of your choice.",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "incognito": "split",
     "chrome_url_overrides": {
         "newtab": "index.html"
@@ -16,6 +16,5 @@
       "storage"
     ],
     "manifest_version": 2,
-	"options_page": "options.html",
-	"update_url": "https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/updates.xml"
+	"options_page": "options.html"
 }

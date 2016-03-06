@@ -16,5 +16,6 @@
       "storage"
     ],
     "manifest_version": 2,
-	"options_page": "options.html"
+	"options_page": "options.html",
+	"update_url": ""
 }

@@ -25,6 +25,7 @@ var carousel = {
     xhr.send()
   },
   go: function () {
+    $('#prev-post').hide()
     if (localStorage.length === 0) {
       this.displayNoneSelected()
       return
@@ -122,7 +123,6 @@ var carousel = {
 
 $(document).ready(function () {
   console.log('Enter the Carousel')
-  $('#prev-post').hide()
   carousel.go()
 
   $('#next-post').on('click', function () {

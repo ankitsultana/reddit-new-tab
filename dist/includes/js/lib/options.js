@@ -76,6 +76,7 @@ $('#target').submit(function () {
     values['url'] = $(this).val()
   })
   options.addCategory(values['url'])
+  return false
 })
 
 $(document).on('click', '.delete-category', function () {

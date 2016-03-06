@@ -13,3 +13,5 @@ A chrome extension that displays a post from any subreddit in every new tab inst
 ![options.html](https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/images/screenshots/two.png)
 
 ![options.html](https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/images/screenshots/three.png)
+
+### License

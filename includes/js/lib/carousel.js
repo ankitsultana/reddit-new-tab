@@ -1,6 +1,53 @@
-/* global localStorage, $, redditapp */
+/* global XMLHttpRequest, localStorage, $ */
 var carousel = {
   data: [],
+  DOWN_LIMIT: 50,
+  fetch: function () { // return arr of JSON data
+    var jsonData, key, url, xhr, result
+    key = this.getkey()
+    url = key['url'] + '/top/.json?limit=' + this.DOWN_LIMIT
+    xhr = new XMLHttpRequest()
+    xhr.open('GET', url, true)
+    xhr.onload = function (e) {
+      jsonData = JSON.parse(xhr.response)
+      result = jsonData['data']['children']
+      carousel.data = carousel.rotate(result)
+      carousel.currIdx = 0
+      carousel.len = carousel.data.length
+      carousel.display(0)
+      if (this.len < 2) {
+        $('#next-post').hide()
+      }
+    }
+    xhr.onerror = function (e) {
+      carousel.displayError()
+    }
+    xhr.send()
+  },
+  go: function () {
+    if (localStorage.length === 0) {
+      this.displayNoneSelected()
+      return
+    }
+    this.fetch()
+  },
+  getkey: function () {
+    var idx, url, subreddit, temp
+    idx = this.randomInt(0, localStorage.length - 1)
+    url = localStorage.getItem(localStorage.key(idx))
+    this.subredditurl = url
+    this.subreddit = localStorage.key(idx)
+    subreddit = localStorage.key(idx)
+    console.log(subreddit)
+    console.log(url)
+    temp = '{"subreddit": "' + subreddit + '", "url": "' + url + '"}'
+    return JSON.parse(temp)
+  },
+  randomInt: function (min, max) {
+    return Math.floor(Math.random() * (max - min) + min)
+  },
+  subredditurl: '',
+  subreddit: '',
   currIdx: 0,
   len: 0,
   setSocial: function (title, subreddit, url) {
@@ -22,7 +69,7 @@ var carousel = {
     var len, temp, iter, hinge
     temp = []
     len = arr.length
-    hinge = redditapp.randomInt(0, len - 1)
+    hinge = this.randomInt(0, len - 1)
     for (iter = hinge; iter < len; iter++) {
       temp.push(arr[iter])
     }
@@ -31,6 +78,14 @@ var carousel = {
     }
     return temp
   },
+  displayError: function () {
+    this.setData('Oops! that request didn\'t go long')
+    this.setSubreddit('Error')
+  },
+  displayNoneSelected: function () {
+    this.setData('You haven\'t selected any subreddits. Click on the wrench on the bottom right of this page')
+    this.setSubreddit('None')
+  },
   display: function (idx) {
     var title, subreddit, url
     title = this.getTitle(this.data[idx])
@@ -38,18 +93,8 @@ var carousel = {
     url = this.getURL(this.data[idx])
     console.log(this.data[idx])
     this.setData(title)
-    this.setSubreddit(subreddit, redditapp.subredditurl)
+    this.setSubreddit(subreddit, this.subredditurl)
     this.setSocial(title, subreddit, url)
-  },
-  go: function () {
-    if (localStorage.length === 0) {
-      return
-    }
-    this.data = redditapp.fetch()
-    this.data = this.rotate(this.data)
-    this.currIdx = 0
-    this.len = this.data.length
-    this.display(0)
   },
   getNext: function () {
     this.currIdx++
@@ -79,9 +124,6 @@ $(document).ready(function () {
   console.log('Enter the Carousel')
   $('#prev-post').hide()
   carousel.go()
-  if (carousel.len < 2) {
-    $('#next-post').hide()
-  }
 
   $('#next-post').on('click', function () {
     if (carousel.getNext()) {  // Hide next button
@@ -100,7 +142,6 @@ $(document).ready(function () {
     }
   })
   $('#refresh-button').on('click', function () {
-    console.log('bam')
     carousel.refresh()
   })
 })

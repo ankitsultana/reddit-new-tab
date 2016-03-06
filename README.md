@@ -1,5 +1,7 @@
 # reddit-new-tab
 
+### [Download from Chrome Webstore](https://chrome.google.com/webstore/detail/reddit-new-tab/gkobcdoenbilkdahndhmcdjbofoldfcd)
+
 A chrome extension that displays a post from any subreddit in every new tab instance. Users can choose which subreddit they want to subscribe to
 
 ### Screenshots

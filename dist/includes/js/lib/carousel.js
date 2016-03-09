@@ -59,8 +59,9 @@ var carousel = {
     $('#twitter-link').attr('href', twitterurl)
     $('#reddit-link').attr('href', url)
   },
-  setData: function (data) {
-    document.getElementById('content').innerHTML = data
+  setData: function (data, url) {
+    $('#content').text(data)
+    $('#content').attr('href', url)
   },
   setSubreddit: function (subreddit, url) {
     document.getElementById('subreddit-name').innerHTML = subreddit
@@ -88,14 +89,15 @@ var carousel = {
     this.setSubreddit('None')
   },
   display: function (idx) {
-    var title, subreddit, url
+    var title, subreddit, permalink, url
     title = this.getTitle(this.data[idx])
     subreddit = this.getSubreddit(this.data[idx])
+    permalink = this.getPermalink(this.data[idx])
     url = this.getURL(this.data[idx])
     console.log(this.data[idx])
-    this.setData(title)
+    this.setData(title, url)
     this.setSubreddit(subreddit, this.subredditurl)
-    this.setSocial(title, subreddit, url)
+    this.setSocial(title, subreddit, permalink)
   },
   getNext: function () {
     this.currIdx++
@@ -113,8 +115,11 @@ var carousel = {
   getSubreddit: function (obj) {
     return obj['data']['subreddit']
   },
+  getPermalink: function (obj) {
+    return 'http://reddit.com' + obj['data']['permalink']
+  },
   getURL: function (obj) {
-    return 'http://reddit.com/' + obj['data']['permalink']
+    return obj['data']['url']
   },
   refresh: function () {
     this.go()

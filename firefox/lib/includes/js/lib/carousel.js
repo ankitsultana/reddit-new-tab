@@ -64,7 +64,7 @@ var carousel = {
     $('#content').attr('href', url)
   },
   setSubreddit: function (subreddit, url) {
-    document.getElementById('subreddit-name').innerHTML = subreddit
+    $('#subreddit-name').text(subreddit)
     $('#subreddit-name').attr('href', url)
   },
   rotate: function (arr) {

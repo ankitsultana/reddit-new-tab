@@ -1,0 +1,19 @@
+{
+  "title": "reddit-new-tab",
+  "name": "reddit-new-tab",
+  "version": "0.0.2",
+  "description": "Replaces New Tab instances with a post from Sub-Reddits of your choice.",
+  "main": "index.js",
+  "author": "Ankit Sultana",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack",
+	"reddit",
+	"new",
+	"tab"
+  ]
+}

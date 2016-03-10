@@ -83,7 +83,7 @@ $(document).on('click', '.delete-category', function () {
   var id, key
   id = $(this).attr('id')
   id = 'e' + id
-  key = document.getElementById(id).innerHTML
+  key = $('#' + id).text()
   console.log(id)
   options.deleteCategory(key)
 })

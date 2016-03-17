@@ -148,6 +148,9 @@ body {
 input:focus {
     outline: none;
 }
+#category-list {
+	overflow: auto;
+}
 #category-list li {
     float: left;
     margin: 3px 3px;

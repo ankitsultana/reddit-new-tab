@@ -1,7 +1,7 @@
 {
     "name": "Reddit New Tab",
     "description": "Replaces New Tab instances with a post from Sub-Reddits of your choice.",
-    "version": "2.3.2",
+    "version": "2.3.3",
     "incognito": "split",
     "chrome_url_overrides": {
         "newtab": "index.html"

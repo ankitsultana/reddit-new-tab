@@ -98,7 +98,7 @@ body {
     float: left;
 }
 .container {
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 #category-input {
     font-family: 'Montserrat';
@@ -147,9 +147,6 @@ body {
 }
 input:focus {
     outline: none;
-}
-#category-list {
-	overflow: auto;
 }
 #category-list li {
     float: left;

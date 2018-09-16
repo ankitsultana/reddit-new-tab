@@ -11,13 +11,13 @@ A chrome/firefox extension that displays a post from any subreddit in every new 
 
 **New Tab**
 
-![index.html](https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/images/screenshots/one.png)
+![index.html](https://raw.githubusercontent.com/ankitsultana/reddit-new-tab/master/images/screenshots/one.png)
 
 **Options Page**
 
-![options.html](https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/images/screenshots/two.png)
+![options.html](https://raw.githubusercontent.com/ankitsultana/reddit-new-tab/master/images/screenshots/two.png)
 
-![options.html](https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/images/screenshots/three.png)
+![options.html](https://raw.githubusercontent.com/ankitsultana/reddit-new-tab/master/images/screenshots/three.png)
 
 ### Badges
 
@@ -25,4 +25,4 @@ A chrome/firefox extension that displays a post from any subreddit in every new 
 
 ### License
 
-[GNU GPL v3](https://raw.githubusercontent.com/bk2dcradle/reddit-new-tab/master/LICENSE)
+[GNU GPL v3](https://raw.githubusercontent.com/ankitsultana/reddit-new-tab/master/LICENSE)
